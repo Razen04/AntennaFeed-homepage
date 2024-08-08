@@ -1,0 +1,60 @@
+.btn button {
+    display: block;
+    width: 200px;
+    height: 70px;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #333;
+    border: 2px solid #333;
+    /* letter-spacing: 2px; */
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+    background-color: #cef196;
+}
+
+.btn button span {
+    position: relative;
+    z-index: 2;
+}
+
+.btn button:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #a6ce66;
+    transition: all .35s;
+}
+
+.btn button:hover::after {
+    width: 100%;
+}
+
+
+.scroll {
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: larger;
+    font-weight: 700;
+    cursor: pointer;
+    animation: floatUpDown 3s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+
+    0%,
+    100% {
+        transform: translate(-50%, 0);
+    }
+
+    50% {
+        transform: translate(-50%, -10px);
+    }
+}
